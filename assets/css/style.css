@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: sans-serif;
 }
 
 .cabecalho {
@@ -10,13 +11,13 @@ body {
 .menu {
    display: flex;
    justify-content: center;
+   margin: 10px 0px;
 }
 
 .menu a {
     text-decoration: none;
     font-weight: bold;
     margin-right: 15px;
-    font-family: sans-serif;
     border: 1px solid blue;
     padding: 5px;
     margin-top: 10px;
