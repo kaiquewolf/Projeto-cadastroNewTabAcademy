@@ -13,3 +13,16 @@
 .lista tr td {
     padding: 10px;
 }
+
+.lista .btn-alterar{
+    background: #0066A2;
+    color: white;
+    border-style: outset;
+    border-color: #0066A2;
+    height: 33px;
+    width: 82px;
+    font: bold 15px strong, sans-serif;
+    text-shadow: none;
+    text-transform: capitalize;
+    cursor: pointer;
+}
