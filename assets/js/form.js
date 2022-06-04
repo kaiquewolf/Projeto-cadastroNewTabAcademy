@@ -1,5 +1,5 @@
 function testaFormulario(e) {
-    e.preventDefaut();
+    e.preventDefault();
 
     // for(i in e.target.elements['phone'].value) {
     //     if('0123456789'.indexOf(e.target.elements['phone'].value[i]) == -1) {
@@ -8,14 +8,14 @@ function testaFormulario(e) {
     //       }
     // }
 
-    var phonePattern = /[^0-9-()]+/g
+    var phonePattern = /[^0-9-() ]+/g
 
     if (phonePattern.test(e.target.elements['phone'].value)) {
         alert('Apenas números são permitidos no campo telefone!')
         return false
     }
 
-    if (e.target.elements['phone'].value.replace(/[-() ]/g), ''.length < 11) {
+    if (e.target.elements['phone'].value.replace(/[-() ]/g, '').length < 11) {
         alert('Número inválido')
         return false
     }
@@ -68,8 +68,8 @@ if (id !== null) {
     }
 }
 
-function testeCampoTelefone(e) {
-    e.preventDefaut()
+function testaCampoTelefone(e) {
+    e.preventDefault()
 
     if (e.target.value.length == 0){
         e.target.value += '('
@@ -79,11 +79,11 @@ function testeCampoTelefone(e) {
         e.target.value += ')'
     }
 
-    if (e.target.value.length == 10){
+    if (e.target.value.length == 9){
         e.target.value += '-'
     }
     
-    if ((/[0-9]/g).teste(e.key) && e.target.value.length < 15) {
+    if ((/[0-9]/g).test(e.key) && e.target.value.length < 15) {
         e.target.value += e.key
     }
 }

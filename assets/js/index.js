@@ -30,7 +30,7 @@ function desenhaTabela() {
             </td>
             <td>
                 <button onclick="deleteUser(${person})"> Excluir </button>
-                <a href="./src/form.html?person=${person}"> Editar </a>
+                <a href="./form.html?person=${person}"> Editar </a>
             </td>
         </tr>
         `
@@ -39,8 +39,8 @@ function desenhaTabela() {
 
 function deleteUser(p){
     people.splice(p , 1);
-    desenhatabela();
+    desenhaTabela();
     localstorage.setItem('people', JSON.stringify(people))
 }
 
-desenhaTabela();
+desenhaTabela()
